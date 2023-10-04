@@ -1,0 +1,2 @@
+['remote "mybucket"']
+    url = s3://post-reddit-dataset
