@@ -1,2 +1,6 @@
+[core]
+    remote = datastore
 ['remote "mybucket"']
-    url = s3://post-reddit-dataset
+    url = s3://reddit-data-ml
+['remote "datastore"']
+    url = s3://reddit-data-ml
