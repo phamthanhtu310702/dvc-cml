@@ -1,6 +1,3 @@
-# dvc-cml
-```
-wget -p https://reddit-data-ml.s3.amazonaws.com/reddit/*
-```
+# Example Continuous Machine Learning project
 
-## Download data first
+This repository contains code and data for a simple classification problem. To get the dataset, please run `python get_data.py`.
