@@ -18,6 +18,6 @@ jobs:
           pip install -r requirements.txt
           python train.py  # generate plot.png
 
-          echo "# CML report" >> report.md
-          echo '![](./plot.png "Confusion Matrix")' >> report.md
-          cml comment create report.md
+          # echo "# CML report" >> report.md
+          # echo '![](./plot.png "Confusion Matrix")' >> report.md
+          # cml comment create report.md
