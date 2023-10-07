@@ -7,12 +7,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:  
           node-version: '16'
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
       - uses: iterative/setup-cml@v1
       - uses: actions/checkout@v3
       - name: Train model
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "## Metrics: workflow vs. main" >> report.md
+          git fetch --depth=1 origin main:main
           pip install -r requirements.txt
           python train.py  # generate plot.png
 
