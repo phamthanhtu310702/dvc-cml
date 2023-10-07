@@ -4,14 +4,13 @@ jobs:
   train-and-report:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:  
-          node-version: '16'
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: iterative/setup-cml@v1
+      - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - uses: iterative/setup-cml@v1
-      - uses: actions/checkout@v3
       - name: Train model
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
