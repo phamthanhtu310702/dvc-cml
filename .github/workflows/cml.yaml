@@ -4,7 +4,7 @@ jobs:
   train-and-report:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:  
           node-version: '16'
       - uses: iterative/setup-cml@v1
